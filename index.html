@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valentina Sosa — Software Developer | SAP ABAP & BTP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#010951; --navy-soft:#12184f; --ink:#23253a; --muted:#5c5f75;
+    --paper:#fbfaf7; --card:#ffffff; --line:#e4e2da; --amber:#d99a2b; --amber-soft:#f6ecd8;
+    --code-bg:#0a0f3d; --code-key:#7ec8ff; --code-str:#ffd479; --code-com:#7a86c9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Karla',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16.5px}
+  h1,h2,h3,.brand,.nav a,.btn,.tc{font-family:'Quicksand',sans-serif}
+  a{color:var(--navy)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* header */
+  header{position:sticky;top:0;background:rgba(251,250,247,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.3px}
+  .nav{display:flex;gap:22px;align-items:center}
+  .nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem}
+  .nav a:hover{color:var(--navy)}
+  .lang{border:1.5px solid var(--navy);border-radius:999px;overflow:hidden;display:flex;cursor:pointer}
+  .lang button{border:0;background:transparent;padding:5px 12px;font:600 .82rem 'Quicksand';color:var(--navy);cursor:pointer}
+  .lang button.on{background:var(--navy);color:#fff}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:72px 0 64px}
+  .tc{display:inline-block;background:var(--amber-soft);color:#8a6414;border-radius:6px;padding:3px 10px;font-size:.78rem;font-weight:700;letter-spacing:1.5px;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.3rem);color:var(--navy);line-height:1.08;font-weight:700}
+  .hero .role{font-size:1.15rem;font-weight:600;color:var(--muted);margin-top:10px}
+  .hero p.lead{margin-top:18px;max-width:34rem;color:var(--ink)}
+  .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;padding:12px 22px;border-radius:8px}
+  .btn.primary{background:var(--navy);color:#fff}
+  .btn.primary:hover{background:var(--navy-soft)}
+  .btn.ghost{border:1.5px solid var(--navy);color:var(--navy)}
+  .btn.ghost:hover{background:#eef0fa}
+
+  /* signature: ABAP card */
+  .code-card{background:var(--code-bg);border-radius:14px;padding:22px 24px;box-shadow:0 18px 40px rgba(1,9,81,.22);font:500 .86rem/1.75 ui-monospace,'Cascadia Code',Consolas,monospace;color:#dfe4ff}
+  .code-card .dots{display:flex;gap:6px;margin-bottom:14px}
+  .code-card .dots span{width:10px;height:10px;border-radius:50%;background:#2c3370}
+  .code-card .dots span:first-child{background:var(--amber)}
+  .k{color:var(--code-key)} .s{color:var(--code-str)} .c{color:var(--code-com)}
+  .caret{display:inline-block;width:8px;height:1.05em;background:var(--amber);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  @media(prefers-reduced-motion:reduce){.caret{animation:none}}
+
+  /* sections */
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .eyebrow{font:700 .78rem 'Quicksand';letter-spacing:2.5px;color:var(--amber);text-transform:uppercase;margin-bottom:8px}
+  h2{color:var(--navy);font-size:1.7rem;margin-bottom:22px}
+  .about-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:40px}
+  .fact{border-left:3px solid var(--amber);padding-left:14px;margin-bottom:16px}
+  .fact b{display:block;color:var(--navy);font-family:'Quicksand'}
+  .fact span{font-size:.9rem;color:var(--muted)}
+
+  /* experience */
+  .xp{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px}
+  .xp h3{color:var(--navy);font-size:1.15rem}
+  .xp .meta{color:var(--muted);font-size:.9rem;margin:2px 0 14px}
+  .xp ul{margin-left:20px}
+  .xp li{margin-bottom:7px}
+
+  /* projects */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(1,9,81,.10)}
+  @media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+  .card.feature{grid-column:1/-1;border:1.5px solid var(--navy);background:linear-gradient(180deg,#fff, #f7f8ff)}
+  .card h3{color:var(--navy);font-size:1.08rem;margin-bottom:6px}
+  .card p{font-size:.95rem;color:var(--ink);flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+  .tag{font:600 .74rem 'Quicksand';background:#eef0fa;color:var(--navy);border-radius:5px;padding:3px 9px}
+  .badge{align-self:flex-start;font:700 .72rem 'Quicksand';letter-spacing:1px;color:#8a6414;background:var(--amber-soft);border-radius:5px;padding:3px 9px;margin-bottom:10px;text-transform:uppercase}
+
+  /* skills */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .skill h3{font-size:.95rem;color:var(--navy);margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font:600 .8rem 'Quicksand';border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;color:var(--ink)}
+
+  /* contact */
+  .contact{background:var(--navy);color:#fff;border-radius:16px;padding:44px 40px;text-align:center;margin:56px 0}
+  .contact h2{color:#fff}
+  .contact p{color:#c9cdf0;max-width:32rem;margin:0 auto 24px}
+  .contact .btn.primary{background:var(--amber);color:#241a00;border:0;cursor:pointer}
+  .contact .btn.ghost{border-color:#8890d8;color:#fff}
+  .mail-big{display:inline-block;font-family:'Quicksand';font-weight:700;font-size:1.3rem;color:#fff;text-decoration:none;margin-bottom:22px;border-bottom:2px solid var(--amber)}
+  .mail-big:hover{color:var(--amber)}
+
+  footer{padding:26px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
+
+  @media(max-width:820px){
+    .hero{grid-template-columns:1fr;padding-top:48px}
+    .about-grid{grid-template-columns:1fr}
+    .nav a{display:none}
+  }
+  :focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand">Valentina Sosa</div>
+    <nav class="nav">
+      <a href="#sobre" data-i="nav_about"></a>
+      <a href="#exp" data-i="nav_exp"></a>
+      <a href="#proyectos" data-i="nav_proj"></a>
+      <a href="#skills" data-i="nav_skills"></a>
+      <a href="#contacto" data-i="nav_contact"></a>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button id="btn-es" class="on" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div>
+      <span class="tc" data-i="hero_tc"></span>
+      <h1>Valentina Sosa</h1>
+      <div class="role" data-i="hero_role"></div>
+      <p class="lead" data-i="hero_lead"></p>
+      <div class="cta">
+        <a class="btn primary" href="#proyectos" data-i="hero_cta1"></a>
+        <a class="btn ghost" href="#contacto" data-i="hero_cta2"></a>
+      </div>
+    </div>
+    <div class="code-card" aria-hidden="true">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div><span class="k">REPORT</span> z_portfolio.</div>
+      <div>&nbsp;</div>
+      <div><span class="c">* Backend ABAP + Frontend Fiori</span></div>
+      <div><span class="k">DATA</span>(lv_dev) = <span class="s">'Valentina Sosa'</span>.</div>
+      <div><span class="k">SELECT</span> * <span class="k">FROM</span> zproyectos</div>
+      <div>&nbsp;&nbsp;<span class="k">INTO TABLE</span> @<span class="k">DATA</span>(lt_apps).</div>
+      <div><span class="k">WRITE</span>: <span class="s" data-i="code_write"></span>.<span class="caret"></span></div>
+    </div>
+  </div>
+
+  <section id="sobre">
+    <div class="eyebrow" data-i="about_eyebrow"></div>
+    <h2 data-i="about_h"></h2>
+    <div class="about-grid">
+      <div>
+        <p data-i="about_p1" style="margin-bottom:14px"></p>
+        <p data-i="about_p2"></p>
+      </div>
+      <div>
+        <div class="fact"><b data-i="f1b"></b><span data-i="f1s"></span></div>
+        <div class="fact"><b data-i="f2b"></b><span data-i="f2s"></span></div>
+        <div class="fact"><b data-i="f3b"></b><span data-i="f3s"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="exp">
+    <div class="eyebrow" data-i="exp_eyebrow"></div>
+    <h2 data-i="exp_h"></h2>
+    <div class="xp">
+      <h3>SAP ABAP &amp; BTP Developer</h3>
+      <div class="meta" data-i="exp_meta"></div>
+      <ul>
+        <li data-i="exp_l1"></li>
+        <li data-i="exp_l2"></li>
+        <li data-i="exp_l3"></li>
+        <li data-i="exp_l4"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="eyebrow" data-i="proj_eyebrow"></div>
+    <h2 data-i="proj_h"></h2>
+    <div class="grid">
+      <article class="card feature">
+        <span class="badge" data-i="p1_badge"></span>
+        <h3 data-i="p1_h"></h3>
+        <p data-i="p1_p"></p>
+        <div class="tags"><span class="tag">PHP · CodeIgniter</span><span class="tag">Vue.js</span><span class="tag">SQL</span><span class="tag">PHPUnit</span><span class="tag">PMBOK + Scrum</span><span class="tag">Jira · Confluence</span></div>
+      </article>
+      <article class="card">
+        <h3 data-i="p2_h"></h3>
+        <p data-i="p2_p"></p>
+        <div class="tags"><span class="tag">SAP UI5 / Fiori</span><span class="tag">OData</span><span class="tag">ABAP</span></div>
+      </article>
+      <article class="card">
+        <h3 data-i="p3_h"></h3>
+        <p data-i="p3_p"></p>
+        <div class="tags"><span class="tag">ABAP</span><span class="tag">SAP UI5</span><span class="tag">OData</span></div>
+      </article>
+      <article class="card">
+        <h3 data-i="p4_h"></h3>
+        <p data-i="p4_p"></p>
+        <div class="tags"><span class="tag">SAP UI5</span><span class="tag">ABAP</span><span class="tag">OData</span></div>
+      </article>
+      <article class="card">
+        <h3 data-i="p5_h"></h3>
+        <p data-i="p5_p"></p>
+        <div class="tags"><span class="tag">SAP BTP</span><span class="tag">SAP ECC</span><span class="tag">Cloud</span></div>
+      </article>
+    </div>
+    <p style="margin-top:16px;font-size:.85rem;color:var(--muted)" data-i="proj_note"></p>
+  </section>
+
+  <section id="skills">
+    <div class="eyebrow" data-i="sk_eyebrow"></div>
+    <h2 data-i="sk_h"></h2>
+    <div class="skills">
+      <div class="skill"><h3>SAP</h3>
+        <div class="chips"><span class="chip">ABAP / ABAP OO</span><span class="chip">ABAP Dictionary</span><span class="chip">Open SQL</span><span class="chip">BAPIs · BADIs · User Exits</span><span class="chip">ALV</span><span class="chip">OData</span><span class="chip">SAP UI5 / Fiori</span><span class="chip">SAP BTP</span><span class="chip">ECC · S/4HANA</span><span class="chip">SAP HANA</span></div>
+      </div>
+      <div class="skill"><h3 data-i="sk2"></h3>
+        <div class="chips"><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">C++</span><span class="chip">PHP · CodeIgniter</span><span class="chip">Vue.js</span><span class="chip">SQL</span></div>
+      </div>
+      <div class="skill"><h3 data-i="sk3"></h3>
+        <div class="chips"><span class="chip">BPMN</span><span class="chip">UML</span><span class="chip" data-i="sk3c"></span></div>
+      </div>
+      <div class="skill"><h3 data-i="sk4"></h3>
+        <div class="chips"><span class="chip">PMBOK</span><span class="chip">Scrum</span><span class="chip">Jira</span><span class="chip">Confluence</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact" id="contacto">
+    <h2 data-i="c_h"></h2>
+    <p data-i="c_p"></p>
+    <a class="mail-big" href="mailto:valeensoosa@gmail.com">valeensoosa@gmail.com</a>
+    <div class="cta" style="justify-content:center">
+      <button class="btn primary" id="copyBtn" onclick="copyMail()" data-i="c_b1"></button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/valentina-sosa-55b455254/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <span data-i="foot"></span>
+</footer>
+
+<script>
+const T = {
+  es: {
+    nav_about:"Sobre mí", nav_exp:"Experiencia", nav_proj:"Proyectos", nav_skills:"Habilidades", nav_contact:"Contacto",
+    hero_tc:"SOFTWARE DEVELOPER", hero_role:"SAP ABAP & BTP · Full-stack SAP UI5/Fiori",
+    hero_lead:"Construyo soluciones empresariales de punta a punta: del modelado del proceso de negocio y el backend ABAP, a interfaces Fiori que la gente usa todos los días.",
+    hero_cta1:"Ver proyectos", hero_cta2:"Contactame",
+    code_write:"'Hola, soy Valen'",
+    about_eyebrow:"Sobre mí", about_h:"Ingeniería aplicada a procesos de negocio",
+    about_p1:"Soy desarrolladora de software con más de 2 años de experiencia en el ecosistema SAP y estudiante avanzada de Ingeniería en Sistemas de Información (UTN). Trabajo el ciclo completo de desarrollo: relevamiento de requerimientos con consultores funcionales, implementación backend en ABAP, servicios OData y aplicaciones SAP UI5/Fiori.",
+    about_p2:"Mi formación previa en Economía y Administración me da una mirada analítica sobre los procesos de negocio: entiendo qué problema resuelve cada desarrollo antes de escribir la primera línea de código.",
+    f1b:"+2 años", f1s:"de experiencia profesional en SAP",
+    f2b:"Full-stack SAP", f2s:"ABAP + OData + UI5/Fiori en ECC, S/4HANA y BTP",
+    f3b:"2026", f3s:"graduación estimada — Ing. en Sistemas de Información, UTN",
+    exp_eyebrow:"Experiencia", exp_h:"Trayectoria profesional",
+    exp_meta:"Alan Consulting · Marzo 2024 – Actualidad",
+    exp_l1:"Desarrollo y mantenimiento de objetos ABAP (reportes ALV, BAPIs, BADIs, User Exits) y servicios OData en entornos SAP ECC y S/4HANA.",
+    exp_l2:"Desarrollo de aplicaciones SAP UI5/Fiori integradas con backend ABAP para clientes de distintas industrias.",
+    exp_l3:"Implementación de soluciones en SAP BTP integrando servicios cloud y extensiones de SAP ECC.",
+    exp_l4:"Relevamiento y definición de requerimientos técnicos junto a consultores funcionales y clientes, bajo metodologías ágiles (Scrum).",
+    proj_eyebrow:"Proyectos", proj_h:"Trabajo seleccionado",
+    p1_badge:"Proyecto destacado", p1_h:"Sistema Web de Gestión de Reclamos Municipales",
+    p1_p:"Proyecto Final de Carrera desarrollado de punta a punta: backend PHP (CodeIgniter), frontend Vue.js y base de datos relacional. Dirigido con metodología híbrida PMBOK + Scrum en 8 sprints, con más de 30 requerimientos trazados, pruebas unitarias con PHPUnit y un 95% de cumplimiento del cronograma.",
+    p2_h:"Portal de comunicación interna para red de concesionarios",
+    p2_p:"Ecosistema de aplicaciones Fiori para la gestión de circulares y plantillas: bandeja de entrada, gestión de usuarios y roles, y flujos de publicación integrados con backend ABAP vía OData.",
+    p3_h:"Gestión de exportaciones marítimas",
+    p3_p:"Aplicación SAP para el seguimiento de operaciones de exportación de embarcaciones: estados, documentación asociada y consultas sobre datos de negocio en tiempo real.",
+    p4_h:"Certificación de exportaciones químicas",
+    p4_p:"Sistema de generación y gestión de certificados de exportación para productos químicos, con formularios dinámicos en SAP UI5 y lógica de validación en ABAP.",
+    p5_h:"Extensiones cloud en SAP BTP",
+    p5_p:"Soluciones que extienden SAP ECC hacia la nube: integración de servicios BTP para optimizar procesos y tiempos de procesamiento de datos.",
+    proj_note:"Los proyectos profesionales se describen de forma general para proteger la confidencialidad de los clientes.",
+    sk_eyebrow:"Habilidades", sk_h:"Stack y herramientas",
+    sk2:"Lenguajes y web", sk3:"Análisis y diseño", sk3c:"Análisis de requerimientos", sk4:"Gestión de proyectos",
+    c_h:"Trabajemos juntos",
+    c_p:"Estoy abierta a nuevas oportunidades en desarrollo SAP y otras áreas de IT. Escribime y te respondo a la brevedad.",
+    c_b1:"Copiar email", c_copied:"¡Copiado!",
+    foot:"© 2026 Valentina Sosa · Frontera, Santa Fe, Argentina"
+  },
+  en: {
+    nav_about:"About", nav_exp:"Experience", nav_proj:"Projects", nav_skills:"Skills", nav_contact:"Contact",
+    hero_tc:"SOFTWARE DEVELOPER", hero_role:"SAP ABAP & BTP · Full-stack SAP UI5/Fiori",
+    hero_lead:"I build enterprise solutions end to end: from business process modeling and ABAP backend development, to Fiori interfaces people use every day.",
+    hero_cta1:"View projects", hero_cta2:"Get in touch",
+    code_write:"'Hi, I am Valen'",
+    about_eyebrow:"About me", about_h:"Engineering applied to business processes",
+    about_p1:"I'm a software developer with over 2 years of experience in the SAP ecosystem and an advanced Information Systems Engineering student (UTN, Argentina). I work across the full development cycle: requirements gathering with functional consultants, ABAP backend implementation, OData services, and SAP UI5/Fiori applications.",
+    about_p2:"My previous background in Economics and Business Administration gives me an analytical view of business processes: I understand which problem each development solves before writing the first line of code.",
+    f1b:"2+ years", f1s:"of professional SAP experience",
+    f2b:"Full-stack SAP", f2s:"ABAP + OData + UI5/Fiori on ECC, S/4HANA and BTP",
+    f3b:"2026", f3s:"expected graduation — Information Systems Engineering, UTN",
+    exp_eyebrow:"Experience", exp_h:"Professional background",
+    exp_meta:"Alan Consulting · March 2024 – Present",
+    exp_l1:"Development and maintenance of ABAP objects (ALV reports, BAPIs, BADIs, User Exits) and OData services in SAP ECC and S/4HANA environments.",
+    exp_l2:"Development of SAP UI5/Fiori applications integrated with ABAP backends for clients across different industries.",
+    exp_l3:"Implementation of SAP BTP solutions integrating cloud services and SAP ECC extensions.",
+    exp_l4:"Gathering and defining technical requirements together with functional consultants and clients, under agile methodologies (Scrum).",
+    proj_eyebrow:"Projects", proj_h:"Selected work",
+    p1_badge:"Featured project", p1_h:"Municipal Complaint Management Web System",
+    p1_p:"Final Degree Project built end to end: PHP (CodeIgniter) backend, Vue.js frontend, and a relational database. Managed with a hybrid PMBOK + Scrum methodology across 8 sprints, with 30+ traced requirements, PHPUnit unit testing, and 95% adherence to the planned schedule.",
+    p2_h:"Internal communication portal for a dealership network",
+    p2_p:"Ecosystem of Fiori applications for managing bulletins and templates: inbox, user and role management, and publishing workflows integrated with an ABAP backend via OData.",
+    p3_h:"Maritime export management",
+    p3_p:"SAP application for tracking vessel export operations: statuses, related documentation, and real-time queries over business data.",
+    p4_h:"Chemical export certification",
+    p4_p:"System for generating and managing export certificates for chemical products, with dynamic SAP UI5 forms and ABAP validation logic.",
+    p5_h:"Cloud extensions on SAP BTP",
+    p5_p:"Solutions extending SAP ECC to the cloud: BTP service integrations that streamline processes and data processing times.",
+    proj_note:"Professional projects are described in general terms to protect client confidentiality.",
+    sk_eyebrow:"Skills", sk_h:"Stack & tools",
+    sk2:"Languages & web", sk3:"Analysis & design", sk3c:"Requirements analysis", sk4:"Project management",
+    c_h:"Let's work together",
+    c_p:"I'm open to new opportunities in SAP development and other IT areas. Drop me a line and I'll get back to you shortly.",
+    c_b1:"Copy email", c_copied:"Copied!",
+    foot:"© 2026 Valentina Sosa · Frontera, Santa Fe, Argentina"
+  }
+};
+let curLang = 'es';
+function copyMail(){
+  const done = () => {
+    const b = document.getElementById('copyBtn');
+    b.textContent = T[curLang].c_copied;
+    setTimeout(()=>{ b.textContent = T[curLang].c_b1; }, 1600);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText('valeensoosa@gmail.com').then(done).catch(done);
+  } else {
+    const i = document.createElement('input');
+    i.value = 'valeensoosa@gmail.com'; document.body.appendChild(i);
+    i.select(); document.execCommand('copy'); document.body.removeChild(i); done();
+  }
+}
+function setLang(l){
+  curLang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i]').forEach(el=>{ el.textContent = T[l][el.dataset.i] || ''; });
+  document.getElementById('btn-es').classList.toggle('on', l==='es');
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+}
+setLang('es');
+</script>
+</body>
+</html>
