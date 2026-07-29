@@ -18,8 +18,6 @@
   h1,h2,h3,.brand,.nav a,.btn,.tc{font-family:'Quicksand',sans-serif}
   a{color:var(--navy)}
   .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-
-  /* header */
   header{position:sticky;top:0;background:rgba(251,250,247,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
   .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
   .brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.3px}
@@ -29,8 +27,6 @@
   .lang{border:1.5px solid var(--navy);border-radius:999px;overflow:hidden;display:flex;cursor:pointer}
   .lang button{border:0;background:transparent;padding:5px 12px;font:600 .82rem 'Quicksand';color:var(--navy);cursor:pointer}
   .lang button.on{background:var(--navy);color:#fff}
-
-  /* hero */
   .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:72px 0 64px}
   .tc{display:inline-block;background:var(--amber-soft);color:#8a6414;border-radius:6px;padding:3px 10px;font-size:.78rem;font-weight:700;letter-spacing:1.5px;margin-bottom:16px}
   .hero h1{font-size:clamp(2.2rem,5vw,3.3rem);color:var(--navy);line-height:1.08;font-weight:700}
@@ -42,8 +38,6 @@
   .btn.primary:hover{background:var(--navy-soft)}
   .btn.ghost{border:1.5px solid var(--navy);color:var(--navy)}
   .btn.ghost:hover{background:#eef0fa}
-
-  /* signature: ABAP card */
   .code-card{background:var(--code-bg);border-radius:14px;padding:22px 24px;box-shadow:0 18px 40px rgba(1,9,81,.22);font:500 .86rem/1.75 ui-monospace,'Cascadia Code',Consolas,monospace;color:#dfe4ff}
   .code-card .dots{display:flex;gap:6px;margin-bottom:14px}
   .code-card .dots span{width:10px;height:10px;border-radius:50%;background:#2c3370}
@@ -52,8 +46,6 @@
   .caret{display:inline-block;width:8px;height:1.05em;background:var(--amber);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
   @media(prefers-reduced-motion:reduce){.caret{animation:none}}
-
-  /* sections */
   section{padding:56px 0;border-top:1px solid var(--line)}
   .eyebrow{font:700 .78rem 'Quicksand';letter-spacing:2.5px;color:var(--amber);text-transform:uppercase;margin-bottom:8px}
   h2{color:var(--navy);font-size:1.7rem;margin-bottom:22px}
@@ -61,33 +53,32 @@
   .fact{border-left:3px solid var(--amber);padding-left:14px;margin-bottom:16px}
   .fact b{display:block;color:var(--navy);font-family:'Quicksand'}
   .fact span{font-size:.9rem;color:var(--muted)}
-
-  /* experience */
   .xp{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px}
   .xp h3{color:var(--navy);font-size:1.15rem}
   .xp .meta{color:var(--muted);font-size:.9rem;margin:2px 0 14px}
   .xp ul{margin-left:20px}
   .xp li{margin-bottom:7px}
-
-  /* projects */
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s ease}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
   .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(1,9,81,.10)}
   @media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
-  .card.feature{grid-column:1/-1;border:1.5px solid var(--navy);background:linear-gradient(180deg,#fff, #f7f8ff)}
+  .card.feature{grid-column:1/-1;border:1.5px solid var(--navy);background:linear-gradient(180deg,#fff,#f7f8ff)}
   .card h3{color:var(--navy);font-size:1.08rem;margin-bottom:6px}
   .card p{font-size:.95rem;color:var(--ink);flex:1}
   .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
   .tag{font:600 .74rem 'Quicksand';background:#eef0fa;color:var(--navy);border-radius:5px;padding:3px 9px}
   .badge{align-self:flex-start;font:700 .72rem 'Quicksand';letter-spacing:1px;color:#8a6414;background:var(--amber-soft);border-radius:5px;padding:3px 9px;margin-bottom:10px;text-transform:uppercase}
-
-  /* skills */
+  .badge.green{color:#1a5c2a;background:#e6f4ea}
+  .card-links{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .card-link{font:600 .8rem 'Quicksand';color:var(--navy);text-decoration:none;border:1.5px solid var(--navy);border-radius:6px;padding:5px 12px;transition:background .15s}
+  .card-link:hover{background:var(--navy);color:#fff}
+  .card-link.demo{background:var(--navy);color:#fff}
+  .card-link.demo:hover{background:var(--navy-soft)}
+  .sub-eyebrow{font:700 .75rem 'Quicksand';letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin:36px 0 16px;padding-top:32px;border-top:1px dashed var(--line)}
   .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
   .skill h3{font-size:.95rem;color:var(--navy);margin-bottom:10px}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
   .chip{font:600 .8rem 'Quicksand';border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;color:var(--ink)}
-
-  /* contact */
   .contact{background:var(--navy);color:#fff;border-radius:16px;padding:44px 40px;text-align:center;margin:56px 0}
   .contact h2{color:#fff}
   .contact p{color:#c9cdf0;max-width:32rem;margin:0 auto 24px}
@@ -95,9 +86,7 @@
   .contact .btn.ghost{border-color:#8890d8;color:#fff}
   .mail-big{display:inline-block;font-family:'Quicksand';font-weight:700;font-size:1.3rem;color:#fff;text-decoration:none;margin-bottom:22px;border-bottom:2px solid var(--amber)}
   .mail-big:hover{color:var(--amber)}
-
   footer{padding:26px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
-
   @media(max-width:820px){
     .hero{grid-template-columns:1fr;padding-top:48px}
     .about-grid{grid-template-columns:1fr}
@@ -184,35 +173,98 @@
   <section id="proyectos">
     <div class="eyebrow" data-i="proj_eyebrow"></div>
     <h2 data-i="proj_h"></h2>
+
+    <!-- PROFESSIONAL -->
     <div class="grid">
-      <article class="card feature">
-        <span class="badge" data-i="p1_badge"></span>
-        <h3 data-i="p1_h"></h3>
-        <p data-i="p1_p"></p>
-        <div class="tags"><span class="tag">PHP · CodeIgniter</span><span class="tag">Vue.js</span><span class="tag">SQL</span><span class="tag">PHPUnit</span><span class="tag">PMBOK + Scrum</span><span class="tag">Jira · Confluence</span></div>
-      </article>
       <article class="card">
         <h3 data-i="p2_h"></h3>
         <p data-i="p2_p"></p>
-        <div class="tags"><span class="tag">SAP UI5 / Fiori</span><span class="tag">OData</span><span class="tag">ABAP</span></div>
+        <div class="tags">
+          <span class="tag">SAP UI5 / Fiori</span>
+          <span class="tag">Gestión de roles</span>
+          <span class="tag">ABAP OO</span>
+          <span class="tag">Flujos de publicación</span>
+        </div>
       </article>
       <article class="card">
         <h3 data-i="p3_h"></h3>
         <p data-i="p3_p"></p>
-        <div class="tags"><span class="tag">ABAP</span><span class="tag">SAP UI5</span><span class="tag">OData</span></div>
+        <div class="tags">
+          <span class="tag">ABAP OO</span>
+          <span class="tag">S/4HANA</span>
+          <span class="tag">ALV Reports</span>
+          <span class="tag">Open SQL</span>
+        </div>
       </article>
       <article class="card">
         <h3 data-i="p4_h"></h3>
         <p data-i="p4_p"></p>
-        <div class="tags"><span class="tag">SAP UI5</span><span class="tag">ABAP</span><span class="tag">OData</span></div>
+        <div class="tags">
+          <span class="tag">SAP UI5</span>
+          <span class="tag">SelectDialog</span>
+          <span class="tag">Formularios dinámicos</span>
+          <span class="tag">Certificación</span>
+        </div>
       </article>
       <article class="card">
         <h3 data-i="p5_h"></h3>
         <p data-i="p5_p"></p>
-        <div class="tags"><span class="tag">SAP BTP</span><span class="tag">SAP ECC</span><span class="tag">Cloud</span></div>
+        <div class="tags">
+          <span class="tag">SAP BTP</span>
+          <span class="tag">Integración cloud</span>
+          <span class="tag">Extensiones ECC</span>
+          <span class="tag">Servicios remotos</span>
+        </div>
       </article>
     </div>
-    <p style="margin-top:16px;font-size:.85rem;color:var(--muted)" data-i="proj_note"></p>
+    <p style="margin-top:12px;font-size:.85rem;color:var(--muted)" data-i="proj_note"></p>
+
+    <!-- ACADEMIC -->
+    <div class="sub-eyebrow" data-i="acad_eyebrow"></div>
+    <div class="grid">
+      <article class="card feature">
+        <span class="badge green" data-i="p6_badge"></span>
+        <h3 data-i="p6_h"></h3>
+        <p data-i="p6_p"></p>
+        <div class="tags">
+          <span class="tag">Python · Django</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">HTML · CSS</span>
+          <span class="tag">Sistema de reseñas</span>
+          <span class="tag">Scrum</span>
+        </div>
+        <div class="card-links">
+          <a class="card-link demo" href="https://valentinasosa.pythonanywhere.com/appserviceshop/" target="_blank" rel="noopener" data-i="p6_demo"></a>
+          <a class="card-link" href="https://github.com/ValennSosa/ServiceShop" target="_blank" rel="noopener" data-i="p6_code"></a>
+        </div>
+      </article>
+      <article class="card">
+        <h3 data-i="p7_h"></h3>
+        <p data-i="p7_p"></p>
+        <div class="tags">
+          <span class="tag">Vue.js</span>
+          <span class="tag">Django · Python</span>
+          <span class="tag">Arduino · IoT</span>
+          <span class="tag">Sensores físicos</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="card-links">
+          <a class="card-link" href="https://github.com/ValennSosa/EstacionamientoFacu" target="_blank" rel="noopener" data-i="p7_code"></a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="badge" data-i="p1_badge"></span>
+        <h3 data-i="p1_h"></h3>
+        <p data-i="p1_p"></p>
+        <div class="tags">
+          <span class="tag">PHP · CodeIgniter</span>
+          <span class="tag">Vue.js</span>
+          <span class="tag">PHPUnit</span>
+          <span class="tag">PMBOK + Scrum</span>
+          <span class="tag">Jira · Confluence</span>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section id="skills">
@@ -271,8 +323,6 @@ const T = {
     exp_l3:"Implementación de soluciones en SAP BTP integrando servicios cloud y extensiones de SAP ECC.",
     exp_l4:"Relevamiento y definición de requerimientos técnicos junto a consultores funcionales y clientes, bajo metodologías ágiles (Scrum).",
     proj_eyebrow:"Proyectos", proj_h:"Trabajo seleccionado",
-    p1_badge:"Proyecto destacado", p1_h:"Sistema Web de Gestión de Reclamos Municipales",
-    p1_p:"Proyecto Final de Carrera desarrollado de punta a punta: backend PHP (CodeIgniter), frontend Vue.js y base de datos relacional. Dirigido con metodología híbrida PMBOK + Scrum en 8 sprints, con más de 30 requerimientos trazados, pruebas unitarias con PHPUnit y un 95% de cumplimiento del cronograma.",
     p2_h:"Portal de comunicación interna para red de concesionarios",
     p2_p:"Ecosistema de aplicaciones Fiori para la gestión de circulares y plantillas: bandeja de entrada, gestión de usuarios y roles, y flujos de publicación integrados con backend ABAP vía OData.",
     p3_h:"Gestión de exportaciones marítimas",
@@ -280,8 +330,20 @@ const T = {
     p4_h:"Certificación de exportaciones químicas",
     p4_p:"Sistema de generación y gestión de certificados de exportación para productos químicos, con formularios dinámicos en SAP UI5 y lógica de validación en ABAP.",
     p5_h:"Extensiones cloud en SAP BTP",
-    p5_p:"Soluciones que extienden SAP ECC hacia la nube: integración de servicios BTP para optimizar procesos y tiempos de procesamiento de datos.",
+    p5_p:"Soluciones que extienden SAP ECC hacia la nube: integración de servicios BTP para optimizar procesos y reducir tiempos de procesamiento de datos.",
     proj_note:"Los proyectos profesionales se describen de forma general para proteger la confidencialidad de los clientes.",
+    acad_eyebrow:"Proyectos académicos",
+    p6_badge:"Live demo disponible",
+    p6_h:"ServiceShop — Plataforma de servicios web",
+    p6_p:"Plataforma web para la publicación y contratación de servicios entre usuarios. Incluye registro, gestión de perfiles, publicación de servicios con imágenes, sistema de reseñas y panel de administración. Desarrollada en equipo con metodología Scrum.",
+    p6_demo:"🌐 Ver demo en vivo",
+    p6_code:"Ver código",
+    p7_h:"Sistema de Gestión de Estacionamiento Inteligente",
+    p7_p:"Sistema IoT integrado: frontend Vue.js, backend Django y sensor físico programado en Arduino que detecta disponibilidad de espacios en tiempo real. Incluye registro de usuarios y visualización de ocupación.",
+    p7_code:"Ver código",
+    p1_badge:"Proyecto Final de Carrera",
+    p1_h:"Sistema Web de Gestión de Reclamos Municipales",
+    p1_p:"Desarrollado de punta a punta: backend PHP (CodeIgniter), frontend Vue.js y base de datos relacional. Dirigido con metodología híbrida PMBOK + Scrum en 8 sprints, con más de 30 requerimientos trazados, pruebas unitarias con PHPUnit y un 95% de cumplimiento del cronograma.",
     sk_eyebrow:"Habilidades", sk_h:"Stack y herramientas",
     sk2:"Lenguajes y web", sk3:"Análisis y diseño", sk3c:"Análisis de requerimientos", sk4:"Gestión de proyectos",
     c_h:"Trabajemos juntos",
@@ -308,8 +370,6 @@ const T = {
     exp_l3:"Implementation of SAP BTP solutions integrating cloud services and SAP ECC extensions.",
     exp_l4:"Gathering and defining technical requirements together with functional consultants and clients, under agile methodologies (Scrum).",
     proj_eyebrow:"Projects", proj_h:"Selected work",
-    p1_badge:"Featured project", p1_h:"Municipal Complaint Management Web System",
-    p1_p:"Final Degree Project built end to end: PHP (CodeIgniter) backend, Vue.js frontend, and a relational database. Managed with a hybrid PMBOK + Scrum methodology across 8 sprints, with 30+ traced requirements, PHPUnit unit testing, and 95% adherence to the planned schedule.",
     p2_h:"Internal communication portal for a dealership network",
     p2_p:"Ecosystem of Fiori applications for managing bulletins and templates: inbox, user and role management, and publishing workflows integrated with an ABAP backend via OData.",
     p3_h:"Maritime export management",
@@ -317,8 +377,20 @@ const T = {
     p4_h:"Chemical export certification",
     p4_p:"System for generating and managing export certificates for chemical products, with dynamic SAP UI5 forms and ABAP validation logic.",
     p5_h:"Cloud extensions on SAP BTP",
-    p5_p:"Solutions extending SAP ECC to the cloud: BTP service integrations that streamline processes and data processing times.",
+    p5_p:"Solutions extending SAP ECC to the cloud: BTP service integrations that streamline processes and reduce data processing times.",
     proj_note:"Professional projects are described in general terms to protect client confidentiality.",
+    acad_eyebrow:"Academic projects",
+    p6_badge:"Live demo available",
+    p6_h:"ServiceShop — Web services platform",
+    p6_p:"Web platform for publishing and hiring services between users. Features user registration, profile management, image-based service listings, a review system, and an admin panel. Built as a team using Scrum methodology.",
+    p6_demo:"🌐 View live demo",
+    p6_code:"View code",
+    p7_h:"Smart Parking Management System",
+    p7_p:"Integrated IoT system: Vue.js frontend, Django backend, and an Arduino-programmed physical sensor that detects real-time parking space availability. Includes user registration and occupancy visualization.",
+    p7_code:"View code",
+    p1_badge:"Final Degree Project",
+    p1_h:"Municipal Complaint Management Web System",
+    p1_p:"Built end to end: PHP (CodeIgniter) backend, Vue.js frontend, and a relational database. Managed with a hybrid PMBOK + Scrum methodology across 8 sprints, with 30+ traced requirements, PHPUnit unit testing, and 95% adherence to the planned schedule.",
     sk_eyebrow:"Skills", sk_h:"Stack & tools",
     sk2:"Languages & web", sk3:"Analysis & design", sk3c:"Requirements analysis", sk4:"Project management",
     c_h:"Let's work together",
