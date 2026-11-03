@@ -4,334 +4,624 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Valentina Sosa — Software Developer | SAP ABAP & BTP</title>
-<meta name="description" content="Portafolio de Valentina Sosa, desarrolladora SAP ABAP & BTP y full-stack SAP UI5/Fiori. Experiencia, proyectos y certificados.">
+<meta name="description" content="Porfolio de Valentina Sosa, desarrolladora SAP ABAP & BTP y full-stack SAP UI5/Fiori. Experiencia, proyectos y certificados.">
 <meta name="author" content="Valentina Sosa">
-<meta name="theme-color" content="#010951">
+<meta name="theme-color" content="#1c3330">
 <link rel="canonical" href="https://valennsosa.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Valentina Sosa — Software Developer | SAP ABAP & BTP">
 <meta property="og:description" content="Desarrolladora SAP ABAP & BTP · Full-stack SAP UI5/Fiori. Experiencia, proyectos y certificados.">
 <meta property="og:url" content="https://valennsosa.github.io/">
 <meta property="og:locale" content="es_AR">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%23010951%27/%3E%3Ctext x=%2750%27 y=%2770%27 font-size=%2762%27 text-anchor=%27middle%27 fill=%27%23ffffff%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EV%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2728%27 fill=%27%231c3330%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2754%27 text-anchor=%27middle%27 fill=%27%23f6f1e8%27 font-family=%27Georgia,serif%27 font-weight=%27600%27%3EVS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;0,9..144,700;1,9..144,520;1,9..144,640&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <style>
   :root{
-    --navy:#010951; --navy-soft:#12184f; --ink:#23253a; --muted:#5c5f75;
-    --paper:#fbfaf7; --card:#ffffff; --line:#e4e2da; --amber:#d99a2b; --amber-soft:#f6ecd8;
-    --code-bg:#0a0f3d; --code-key:#7ec8ff; --code-str:#ffd479; --code-com:#7a86c9;
+    --ink:#1c1916;
+    --muted:#5f584f;
+    --paper:#f4efe6;
+    --card:#fffdf8;
+    --line:#e3d8c8;
+    --forest:#1c3330;
+    --forest-2:#274842;
+    --terra:#c45c2d;
+    --sand:#f0d7b0;
+    --gold:#c8963e;
+    --code-bg:#101c1a;
+    --code-key:#8fd0c3;
+    --code-str:#f0c27a;
+    --code-com:#8aa39c;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Karla',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16.5px}
-  h1,h2,h3,.brand,.nav a,.btn,.tc{font-family:'Quicksand',sans-serif}
-  a{color:var(--navy)}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-  header{position:sticky;top:0;background:rgba(251,250,247,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
-  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-  .brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.3px}
-  .nav{display:flex;gap:22px;align-items:center}
-  .nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem}
-  .nav a:hover{color:var(--navy)}
-  .lang{border:1.5px solid var(--navy);border-radius:999px;overflow:hidden;display:flex;cursor:pointer}
-  .lang button{border:0;background:transparent;padding:5px 12px;font:600 .82rem 'Quicksand';color:var(--navy);cursor:pointer}
-  .lang button.on{background:var(--navy);color:#fff}
-  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:72px 0 64px}
-  .tc{display:inline-block;background:var(--amber-soft);color:#8a6414;border-radius:6px;padding:3px 10px;font-size:.78rem;font-weight:700;letter-spacing:1.5px;margin-bottom:16px}
-  .hero h1{font-size:clamp(2.2rem,5vw,3.3rem);color:var(--navy);line-height:1.08;font-weight:700}
-  .hero .role{font-size:1.15rem;font-weight:600;color:var(--muted);margin-top:10px}
-  .hero p.lead{margin-top:18px;max-width:34rem;color:var(--ink)}
-  .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
-  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.95rem;padding:12px 22px;border-radius:8px}
-  .btn.primary{background:var(--navy);color:#fff}
-  .btn.primary:hover{background:var(--navy-soft)}
-  .btn.ghost{border:1.5px solid var(--navy);color:var(--navy)}
-  .btn.ghost:hover{background:#eef0fa}
-  .code-card{background:var(--code-bg);border-radius:14px;padding:22px 24px;box-shadow:0 18px 40px rgba(1,9,81,.22);font:500 .86rem/1.75 ui-monospace,'Cascadia Code',Consolas,monospace;color:#dfe4ff}
-  .code-card .dots{display:flex;gap:6px;margin-bottom:14px}
-  .code-card .dots span{width:10px;height:10px;border-radius:50%;background:#2c3370}
-  .code-card .dots span:first-child{background:var(--amber)}
-  .k{color:var(--code-key)} .s{color:var(--code-str)} .c{color:var(--code-com)}
-  .caret{display:inline-block;width:8px;height:1.05em;background:var(--amber);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
-  @keyframes blink{50%{opacity:0}}
-  @media(prefers-reduced-motion:reduce){.caret{animation:none}}
-  section{padding:56px 0;border-top:1px solid var(--line)}
-  .eyebrow{font:700 .78rem 'Quicksand';letter-spacing:2.5px;color:#8a6414;text-transform:uppercase;margin-bottom:8px}
-  h2{color:var(--navy);font-size:1.7rem;margin-bottom:22px}
-  .about-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:40px}
-  .fact{border-left:3px solid var(--amber);padding-left:14px;margin-bottom:16px}
-  .fact b{display:block;color:var(--navy);font-family:'Quicksand'}
-  .fact span{font-size:.9rem;color:var(--muted)}
-  .xp{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px}
-  .xp h3{color:var(--navy);font-size:1.15rem}
-  .xp .meta{color:var(--muted);font-size:.9rem;margin:2px 0 14px}
-  .xp ul{margin-left:20px}
-  .xp li{margin-bottom:7px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
-  .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(1,9,81,.10)}
-  @media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
-  .card.feature{grid-column:1/-1;border:1.5px solid var(--navy);background:linear-gradient(180deg,#fff,#f7f8ff)}
-  .card h3{color:var(--navy);font-size:1.08rem;margin-bottom:6px}
-  .card p{font-size:.95rem;color:var(--ink);flex:1}
-  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-  .tag{font:600 .74rem 'Quicksand';background:#eef0fa;color:var(--navy);border-radius:5px;padding:3px 9px}
-  .badge{align-self:flex-start;font:700 .72rem 'Quicksand';letter-spacing:1px;color:#8a6414;background:var(--amber-soft);border-radius:5px;padding:3px 9px;margin-bottom:10px;text-transform:uppercase}
-  .badge.green{color:#1a5c2a;background:#e6f4ea}
-  .card-links{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-  .card-link{font:600 .8rem 'Quicksand';color:var(--navy);text-decoration:none;border:1.5px solid var(--navy);border-radius:6px;padding:5px 12px;transition:background .15s}
-  .card-link:hover{background:var(--navy);color:#fff}
-  .card-link.demo{background:var(--navy);color:#fff}
-  .card-link.demo:hover{background:var(--navy-soft)}
-  .sub-eyebrow{font:700 .75rem 'Quicksand';letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin:36px 0 16px;padding-top:32px;border-top:1px dashed var(--line)}
-  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-  .skill h3{font-size:.95rem;color:var(--navy);margin-bottom:10px}
-  .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chip{font:600 .8rem 'Quicksand';border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;color:var(--ink)}
-  .contact{background:var(--navy);color:#fff;border-radius:16px;padding:44px 40px;text-align:center;margin:56px 0}
-  .contact h2{color:#fff}
-  .contact p{color:#c9cdf0;max-width:32rem;margin:0 auto 24px}
-  .contact .btn.primary{background:var(--amber);color:#241a00;border:0;cursor:pointer}
-  .contact .btn.ghost{border-color:#8890d8;color:#fff}
-  .mail-big{display:inline-block;font-family:'Quicksand';font-weight:700;font-size:1.3rem;color:#fff;text-decoration:none;margin-bottom:22px;border-bottom:2px solid var(--amber)}
-  .mail-big:hover{color:var(--amber)}
-  footer{padding:26px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
-  @media(max-width:820px){
-    .hero{grid-template-columns:1fr;padding-top:48px}
-    .about-grid{grid-template-columns:1fr}
-    .nav a{display:none}
+  body{
+    font-family:Outfit,system-ui,sans-serif;
+    background:
+      radial-gradient(900px 420px at 100% -10%, rgba(240,215,176,.45), transparent 60%),
+      radial-gradient(700px 380px at -10% 30%, rgba(39,72,66,.06), transparent 55%),
+      var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
   }
-  .cert-thumb{display:block;line-height:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px}
-.cert-thumb img{display:block;width:100%;height:auto;transition:opacity .15s}
-.cert-thumb:hover img{opacity:.9}
-.cert .meta{color:var(--muted);font-size:.88rem;margin-bottom:8px}
-:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+  h1,h2,h3,.brand span,.idx,.mail-big{font-family:Fraunces,Georgia,serif;font-weight:560}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+  header{
+    position:sticky;top:0;z-index:30;
+    background:rgba(244,239,230,.9);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(227,216,200,.9);
+  }
+  html.js header{
+    position:absolute;left:0;right:0;
+    background:transparent;border-bottom-color:transparent;
+    backdrop-filter:none;
+  }
+  html.js header.scrolled, html.js header.menu-open{
+    position:fixed;
+    background:rgba(244,239,230,.92);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 10px 30px rgba(28,25,22,.06);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:18px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:600;letter-spacing:.01em}
+  .monogram{
+    width:36px;height:36px;border-radius:50%;
+    display:grid;place-items:center;
+    background:var(--forest);color:#f6f1e8;
+    font-family:Fraunces,Georgia,serif;font-size:1rem;font-weight:620;
+  }
+  .nav{display:flex;gap:4px;align-items:center}
+  .nav a{
+    text-decoration:none;color:var(--ink);
+    font-weight:550;font-size:.92rem;
+    padding:8px 10px;border-radius:999px;
+  }
+  .nav a:hover{background:rgba(28,51,48,.06)}
+  .lang{display:flex;margin-left:8px;padding:3px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+  .lang button{
+    border:0;background:transparent;color:var(--forest);
+    font:600 .78rem Outfit,sans-serif;letter-spacing:.06em;
+    padding:6px 11px;border-radius:999px;cursor:pointer;
+  }
+  .lang button.on{background:var(--forest);color:#fff}
+  .menu-btn{
+    display:none;width:42px;height:42px;border-radius:50%;
+    border:1px solid transparent;background:transparent;cursor:pointer;
+    align-items:center;justify-content:center;
+  }
+  .burger,.burger::before,.burger::after{
+    display:block;width:18px;height:2px;border-radius:2px;background:var(--forest);position:relative;
+  }
+  .burger::before,.burger::after{content:"";position:absolute;left:0}
+  .burger::before{top:-6px}
+  .burger::after{top:6px}
+  .menu-btn[aria-expanded="true"] .burger{background:transparent}
+  .menu-btn[aria-expanded="true"] .burger::before{top:0;transform:rotate(45deg)}
+  .menu-btn[aria-expanded="true"] .burger::after{top:0;transform:rotate(-45deg)}
+  html.js header:not(.scrolled):not(.menu-open) .brand,
+  html.js header:not(.scrolled):not(.menu-open) .nav a{color:#f6f1e8}
+  html.js header:not(.scrolled):not(.menu-open) .nav a:hover{background:rgba(255,255,255,.08)}
+  html.js header:not(.scrolled):not(.menu-open) .monogram{background:#f6f1e8;color:var(--forest)}
+  html.js header:not(.scrolled):not(.menu-open) .lang{background:transparent;border-color:rgba(246,241,232,.35)}
+  html.js header:not(.scrolled):not(.menu-open) .lang button{color:#f6f1e8}
+  html.js header:not(.scrolled):not(.menu-open) .lang button.on{background:#f6f1e8;color:var(--forest)}
+  html.js header:not(.scrolled):not(.menu-open) .burger,
+  html.js header:not(.scrolled):not(.menu-open) .burger::before,
+  html.js header:not(.scrolled):not(.menu-open) .burger::after{background:#f6f1e8}
+  html.js header:not(.scrolled):not(.menu-open) .menu-btn[aria-expanded="true"] .burger{background:transparent}
+
+  .hero-band{
+    position:relative;
+    background:
+      radial-gradient(700px 380px at 92% 0%, rgba(224,177,90,.22), transparent 58%),
+      radial-gradient(500px 320px at 0% 100%, rgba(196,92,45,.16), transparent 60%),
+      linear-gradient(165deg,#243f3b 0%, #162825 52%, #1c3330 100%);
+    color:#f6f1e8;
+    overflow:hidden;
+  }
+  .hero-band::before{
+    content:"";position:absolute;right:-120px;top:-140px;
+    width:460px;height:460px;border-radius:50%;
+    border:1px solid rgba(246,241,232,.12);
+  }
+  .hero-band::after{
+    content:"";position:absolute;right:-40px;top:-40px;
+    width:280px;height:280px;border-radius:50%;
+    border:1px solid rgba(240,215,176,.18);
+  }
+  .hero{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1.15fr .85fr;
+    gap:56px;align-items:center;
+    padding:128px 0 92px;
+  }
+  .eyebrow{
+    font-family:Outfit,sans-serif;font-weight:650;
+    font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--terra);margin-bottom:10px;
+  }
+  .hero .eyebrow{color:var(--sand)}
+  .hero h1{
+    font-size:clamp(3.3rem,7vw,5.7rem);
+    line-height:.92;letter-spacing:-.035em;color:#fbf7f1;font-weight:560;
+  }
+  .hero h1 .surname{display:block;font-style:italic;font-weight:520;color:var(--sand)}
+  .hero .role{margin-top:18px;font-size:1.12rem;font-weight:500;color:#f0d7b0}
+  .hero p.lead{margin-top:16px;max-width:38rem;color:#f3ece2;font-size:1.08rem}
+  .cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    text-decoration:none;font-weight:650;font-size:.95rem;
+    padding:12px 22px;border-radius:999px;border:1.5px solid transparent;
+    cursor:pointer;font-family:Outfit,sans-serif;
+    transition:transform .18s ease,background .18s ease,border-color .18s ease;
+  }
+  .hero .btn.primary{background:var(--terra);color:#fff}
+  .hero .btn.primary:hover{background:#a84b22}
+  .hero .btn.ghost{border-color:rgba(246,241,232,.4);color:#f6f1e8;background:transparent}
+  .hero .btn.ghost:hover{background:rgba(255,255,255,.07)}
+  .btn:hover{transform:translateY(-1px)}
+  .code-card{
+    background:var(--code-bg);
+    border-radius:18px;padding:20px 22px 24px;
+    box-shadow:0 24px 50px rgba(0,0,0,.28), 0 0 0 1px rgba(255,255,255,.05);
+    font:500 .84rem/1.7 ui-monospace,'Cascadia Code',Consolas,monospace;
+    color:#e7f0ec;transform:rotate(-1.4deg);
+  }
+  .code-card .dots{display:flex;gap:7px;margin-bottom:14px}
+  .code-card .dots span{width:10px;height:10px;border-radius:50%;background:#3d524c}
+  .code-card .dots span:nth-child(1){background:#e07a5f}
+  .code-card .dots span:nth-child(2){background:#e0b15a}
+  .code-card .dots span:nth-child(3){background:#7dbaa6}
+  .k{color:var(--code-key)} .s{color:var(--code-str)} .c{color:var(--code-com)}
+  .caret{display:inline-block;width:8px;height:1.05em;background:var(--sand);margin-left:2px;vertical-align:text-bottom;animation:blink 1.05s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes riseCard{from{opacity:0;transform:translateY(12px) rotate(-1.4deg)}to{opacity:1;transform:rotate(-1.4deg)}}
+  html.js .hero > *:first-child{animation:rise .7s ease both}
+  html.js .code-card{animation:riseCard .7s ease .12s both}
+
+  section{padding:84px 0 8px;scroll-margin-top:88px}
+  .section-head{display:flex;align-items:flex-end;gap:18px;margin-bottom:28px}
+  .idx{
+    font-size:2.6rem;line-height:.8;font-style:italic;font-weight:520;
+    color:rgba(28,51,48,.18);letter-spacing:-.04em;
+  }
+  h2{color:var(--forest);font-size:clamp(1.9rem,3vw,2.6rem);letter-spacing:-.03em;line-height:1.12}
+  .about-grid{display:grid;grid-template-columns:1.35fr .75fr;gap:36px;align-items:start}
+  .about-copy p + p{margin-top:14px}
+  .about-copy p{font-size:1.05rem}
+  .facts{display:grid;gap:12px}
+  .fact{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:16px 18px 14px;box-shadow:0 10px 28px rgba(28,25,22,.04);
+  }
+  .fact b{display:block;color:var(--forest);font-family:Fraunces,Georgia,serif;font-size:1.7rem;font-weight:560;letter-spacing:-.03em;line-height:1.1}
+  .fact span{display:block;margin-top:4px;color:var(--muted);font-size:.92rem}
+
+  .xp{
+    position:relative;background:var(--card);border:1px solid var(--line);
+    border-radius:24px;padding:32px 34px 28px 36px;
+    box-shadow:0 18px 40px rgba(28,25,22,.05);
+  }
+  .xp::before{
+    content:"";position:absolute;left:0;top:24px;bottom:24px;width:4px;border-radius:4px;
+    background:linear-gradient(var(--terra),var(--gold));
+  }
+  .xp h3{color:var(--forest);font-size:1.7rem;letter-spacing:-.02em}
+  .xp .meta{color:var(--muted);margin:6px 0 18px;font-size:.98rem}
+  .xp .meta::before{
+    content:"";display:inline-block;width:8px;height:8px;margin-right:8px;
+    border-radius:50%;background:#2f9e6b;transform:translateY(-1px);
+  }
+  .xp ul{list-style:none;display:grid;gap:12px}
+  .xp li{position:relative;padding-left:18px}
+  .xp li::before{
+    content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--terra);
+  }
+
+  .case{margin-bottom:8px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .grid.certs{grid-template-columns:1fr 1fr}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:22px;
+    padding:24px;display:flex;flex-direction:column;
+    box-shadow:0 12px 30px rgba(28,25,22,.04);
+    transition:transform .2s ease,box-shadow .2s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(28,25,22,.08)}
+  .card.wide{
+    display:grid;grid-template-columns:1.4fr .8fr;column-gap:28px;align-items:center;
+    background:linear-gradient(180deg,#fffdf8,#f7f1e6);
+  }
+  .card.wide h3,.card.wide p{grid-column:1}
+  .card.wide .tags{grid-column:2;grid-row:1 / span 2;justify-content:flex-end;align-content:center;margin-top:0}
+  .card.feature{
+    grid-column:1 / -1;
+    background:linear-gradient(135deg,#fffdf8 0%, #f8efe4 100%);
+    border-color:#ecd9c4;padding:32px;
+    position:relative;overflow:hidden;
+  }
+  .card.feature::after{
+    content:"";position:absolute;width:200px;height:200px;border-radius:50%;
+    right:-50px;top:-70px;background:rgba(196,92,45,.1);
+  }
+  .card.feature > *{position:relative;z-index:1}
+  .card h3{color:var(--forest);font-size:1.28rem;letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
+  .card.feature h3{font-size:1.7rem;max-width:40rem}
+  .card p{color:var(--ink);flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .tag{font:600 .75rem Outfit,sans-serif;background:#f3eee6;color:var(--forest);border-radius:999px;padding:5px 10px}
+  .badge{
+    align-self:flex-start;font:700 .72rem Outfit,sans-serif;letter-spacing:.08em;
+    text-transform:uppercase;color:#f6f1e8;background:var(--forest);
+    border-radius:999px;padding:5px 11px;margin-bottom:12px;
+  }
+  .badge.green{color:#1d5c3a;background:#e5f2ea}
+  .card-links{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .card-link{
+    font:600 .82rem Outfit,sans-serif;color:var(--forest);text-decoration:none;
+    border:1.5px solid var(--forest);border-radius:999px;padding:7px 14px;
+    transition:background .15s ease,color .15s ease;
+  }
+  .card-link:hover{background:var(--forest);color:#fff}
+  .card-link.demo{background:var(--forest);color:#fff}
+  .card-link.demo:hover{background:var(--forest-2)}
+  .sub-eyebrow{
+    display:flex;align-items:center;gap:16px;
+    margin:40px 0 18px;padding-top:8px;
+    font:700 .75rem Outfit,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+  }
+  .sub-eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+  .note{margin-top:14px;color:var(--muted);font-size:.95rem}
+
+  .skills{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .skill{
+    background:var(--card);border:1px solid var(--line);border-top:3px solid var(--forest);
+    border-radius:20px;padding:22px 22px 18px;
+    box-shadow:0 10px 26px rgba(28,25,22,.04);
+  }
+  .skill:nth-child(2){border-top-color:var(--terra)}
+  .skill:nth-child(3){border-top-color:var(--gold)}
+  .skill:nth-child(4){border-top-color:#3d6b62}
+  .skill h3{font-size:1.25rem;color:var(--forest);margin-bottom:12px;letter-spacing:-.02em}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font:550 .84rem Outfit,sans-serif;background:#f6f1e8;border-radius:999px;padding:6px 12px;color:var(--ink)}
+
+  .cert-thumb{
+    display:block;line-height:0;border-radius:14px;overflow:hidden;margin-bottom:16px;
+    box-shadow:0 10px 24px rgba(28,25,22,.08);border:1px solid var(--line);background:#fff;
+  }
+  .cert-thumb img{display:block;width:100%;height:auto;transition:transform .35s ease}
+  .cert:hover .cert-thumb img{transform:scale(1.025)}
+  .cert .meta{color:var(--muted);font-size:.92rem;margin-bottom:8px}
+
+  .contact-band{
+    margin-top:84px;
+    background:
+      radial-gradient(520px 260px at 88% 120%, rgba(196,92,45,.38), transparent 62%),
+      radial-gradient(480px 240px at 8% -20%, rgba(240,215,176,.16), transparent 60%),
+      var(--forest);
+    color:#f6f1e8;
+    scroll-margin-top:88px;
+  }
+  .contact{padding:84px 0;text-align:center}
+  .contact h2{color:#fff;font-size:clamp(2.3rem,5vw,3.5rem);letter-spacing:-.03em}
+  .contact p{color:#e4ddd2;max-width:36rem;margin:14px auto 22px;font-size:1.05rem}
+  .mail-big{
+    display:inline-block;font-size:clamp(1.4rem,3vw,2.15rem);font-weight:560;
+    color:#fff;text-decoration:none;letter-spacing:-.03em;
+    border-bottom:1px solid rgba(240,215,176,.85);padding-bottom:2px;overflow-wrap:anywhere;
+  }
+  .mail-big:hover{color:var(--sand)}
+  .contact .cta{justify-content:center}
+  .contact .btn.primary{background:var(--sand);color:#241a00;border:0}
+  .contact .btn.primary:hover{background:#f6e4c6}
+  .contact .btn.ghost{border-color:rgba(246,241,232,.4);color:#fff;background:transparent}
+  .contact .btn.ghost:hover{background:rgba(255,255,255,.06)}
+  footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
+  ::selection{background:#f0c9b4;color:var(--ink)}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+  @media(max-width:980px){
+    .grid{grid-template-columns:1fr 1fr}
+    .card.feature{grid-column:1 / -1}
+  }
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr;gap:32px;padding:116px 0 64px}
+    .code-card{transform:none}
+    html.js .code-card{animation-name:rise}
+    .about-grid,.skills,.grid,.grid.certs,.card.wide{grid-template-columns:1fr}
+    .card.wide .tags{grid-column:1;grid-row:auto;justify-content:flex-start;margin-top:16px}
+    .menu-btn{display:inline-flex}
+    .nav{
+      display:none;position:absolute;left:16px;right:16px;top:calc(100% + 8px);
+      flex-direction:column;align-items:stretch;gap:2px;
+      background:#fffdf8;border:1px solid var(--line);border-radius:18px;
+      padding:10px;box-shadow:0 18px 40px rgba(28,25,22,.12);
+    }
+    .nav.open{display:flex}
+    .nav a{color:var(--ink);padding:12px 12px}
+    .lang{align-self:flex-start;margin:8px 8px 6px}
+    html.js header:not(.scrolled):not(.menu-open) .nav a{color:var(--ink)}
+    .xp{padding:26px 20px 22px 22px}
+    section{padding-top:64px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .caret,.hero > *{animation:none}
+    .card,.btn,.cert-thumb img{transition:none}
+    .card:hover,.btn:hover,.cert:hover .cert-thumb img{transform:none}
+  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap bar">
-    <div class="brand">Valentina Sosa</div>
-    <nav class="nav">
+    <a class="brand" href="#inicio">
+      <span class="monogram" aria-hidden="true">VS</span>
+      <span>Valentina Sosa</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav">
       <a href="#sobre" data-i="nav_about">Sobre mí</a>
       <a href="#exp" data-i="nav_exp">Experiencia</a>
       <a href="#proyectos" data-i="nav_proj">Proyectos</a>
       <a href="#skills" data-i="nav_skills">Habilidades</a>
-<a href="#certificados" data-i="nav_certs">Certificados</a>
+      <a href="#certificados" data-i="nav_certs">Certificados</a>
       <a href="#contacto" data-i="nav_contact">Contacto</a>
       <div class="lang" role="group" aria-label="Idioma / Language">
-        <button id="btn-es" class="on" aria-pressed="true" onclick="setLang('es')">ES</button>
-        <button id="btn-en" aria-pressed="false" onclick="setLang('en')">EN</button>
+        <button id="btn-es" class="on" type="button" aria-pressed="true" onclick="setLang('es')">ES</button>
+        <button id="btn-en" type="button" aria-pressed="false" onclick="setLang('en')">EN</button>
       </div>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main id="inicio">
 
-  <div class="hero">
-    <div>
-      <span class="tc" data-i="hero_tc">SOFTWARE DEVELOPER</span>
-      <h1>Valentina Sosa</h1>
-      <div class="role" data-i="hero_role">SAP ABAP &amp; BTP · Full-stack SAP UI5/Fiori</div>
-      <p class="lead" data-i="hero_lead">Construyo soluciones empresariales de punta a punta: del modelado del proceso de negocio y el backend ABAP, a interfaces Fiori que la gente usa todos los días.</p>
+  <div class="hero-band">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow" data-i="hero_tc">SOFTWARE DEVELOPER</div>
+        <h1>Valentina <span class="surname">Sosa</span></h1>
+        <div class="role" data-i="hero_role">SAP ABAP &amp; BTP · Full-stack SAP UI5/Fiori</div>
+        <p class="lead" data-i="hero_lead">Construyo soluciones empresariales de punta a punta: del modelado del proceso de negocio y el backend ABAP, a interfaces Fiori que la gente usa todos los días.</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos" data-i="hero_cta1">Ver proyectos</a>
+          <a class="btn ghost" href="#contacto" data-i="hero_cta2">Contactame</a>
+        </div>
+      </div>
+      <div class="code-card" aria-hidden="true">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div><span class="k">REPORT</span> z_portfolio.</div>
+        <div>&nbsp;</div>
+        <div><span class="c">* Backend ABAP + Frontend Fiori</span></div>
+        <div><span class="k">DATA</span>(lv_dev) = <span class="s">'Valentina Sosa'</span>.</div>
+        <div><span class="k">SELECT</span> * <span class="k">FROM</span> zproyectos</div>
+        <div>&nbsp;&nbsp;<span class="k">INTO TABLE</span> @<span class="k">DATA</span>(lt_apps).</div>
+        <div><span class="k">WRITE</span>: <span class="s" data-i="code_write">'Hola, soy Valen'</span>.<span class="caret"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section id="sobre">
+      <div class="section-head">
+        <span class="idx" aria-hidden="true">01</span>
+        <div>
+          <div class="eyebrow" data-i="about_eyebrow">Sobre mí</div>
+          <h2 data-i="about_h">Ingeniería aplicada a procesos de negocio</h2>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p data-i="about_p1">Soy desarrolladora de software con más de 2 años de experiencia en el ecosistema SAP e Ingeniera en Sistemas de Información (UTN). Trabajo el ciclo completo de desarrollo: relevamiento de requerimientos con consultores funcionales, implementación backend en ABAP, servicios OData y aplicaciones SAP UI5/Fiori.</p>
+          <p data-i="about_p2">Mi formación previa en Economía y Administración me da una mirada analítica sobre los procesos de negocio: entiendo qué problema resuelve cada desarrollo antes de escribir la primera línea de código.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><b data-i="f1b">+2 años</b><span data-i="f1s">de experiencia profesional en SAP</span></div>
+          <div class="fact"><b data-i="f2b">Full-stack SAP</b><span data-i="f2s">ABAP + OData + UI5/Fiori en ECC, S/4HANA y BTP</span></div>
+          <div class="fact"><b data-i="f3b">2026</b><span data-i="f3s">graduada — Ing. en Sistemas de Información, UTN</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="exp">
+      <div class="section-head">
+        <span class="idx" aria-hidden="true">02</span>
+        <div>
+          <div class="eyebrow" data-i="exp_eyebrow">Experiencia</div>
+          <h2 data-i="exp_h">Trayectoria profesional</h2>
+        </div>
+      </div>
+      <div class="xp">
+        <h3>SAP ABAP &amp; BTP Developer</h3>
+        <div class="meta" data-i="exp_meta">Alan Consulting · Marzo 2024 – Actualidad</div>
+        <ul>
+          <li data-i="exp_l1">Desarrollo, mantenimiento y optimización de soluciones SAP utilizando ABAP, incluyendo reportes ALV, módulos de funciones, BAPIs, BADIs y User Exits.</li>
+          <li data-i="exp_l2">Desarrollo de servicios OData, modelado de datos y creación de objetos en ABAP Dictionary (tablas, estructuras y elementos de datos).</li>
+          <li data-i="exp_l3">Desarrollo y mantenimiento de aplicaciones SAPUI5 / SAP Fiori, utilizando XML, JavaScript, JSON y arquitectura MVC.</li>
+          <li data-i="exp_l4">Implementación de extensiones e integraciones en SAP Business Technology Platform (SAP BTP), conectadas con sistemas SAP ECC y S/4HANA.</li>
+          <li data-i="exp_l5">Análisis de requerimientos funcionales y técnicos, debugging y resolución de incidencias en aplicaciones y desarrollos SAP.</li>
+          <li data-i="exp_l6">Colaboración con consultores funcionales y equipos técnicos en proyectos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="section-head">
+        <span class="idx" aria-hidden="true">03</span>
+        <div>
+          <div class="eyebrow" data-i="proj_eyebrow">Proyectos</div>
+          <h2 data-i="proj_h">Trabajo seleccionado</h2>
+        </div>
+      </div>
+
+      <div class="case">
+        <article class="card wide">
+          <h3 data-i="p3_h">Gestión de exportaciones marítimas</h3>
+          <p data-i="p3_p">Aplicación SAP para el seguimiento de operaciones de exportación de embarcaciones: estados, documentación asociada y consultas sobre datos de negocio en tiempo real.</p>
+          <div class="tags">
+            <span class="tag">ABAP OO</span>
+            <span class="tag">S/4HANA</span>
+            <span class="tag">ALV Reports</span>
+            <span class="tag">Open SQL</span>
+          </div>
+        </article>
+      </div>
+      <p class="note" data-i="proj_note">Los proyectos profesionales se describen de forma general para proteger la confidencialidad de los clientes.</p>
+
+      <div class="sub-eyebrow" data-i="acad_eyebrow">Proyectos académicos</div>
+      <div class="grid">
+        <article class="card feature">
+          <span class="badge" data-i="p1_badge">Proyecto Final de Carrera</span>
+          <h3 data-i="p1_h">Sistema Web de Gestión de Reclamos Municipales</h3>
+          <p data-i="p1_p">Desarrollo full-stack: backend en PHP (CodeIgniter), frontend en Vue.js y base de datos MySQL. Dirección del proyecto con metodología híbrida PMBOK + Scrum: 8 sprints de 4 semanas y más de 40 requerimientos funcionales y no funcionales con trazabilidad completa. Testing y documentación: pruebas unitarias con PHPUnit, casos de prueba funcionales y diagramas UML. Gestión de tareas y documentación en Jira y Confluence, con un cumplimiento del 95% del cronograma planificado.</p>
+          <div class="tags">
+            <span class="tag">PHP · CodeIgniter</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">PHPUnit</span>
+            <span class="tag">UML</span>
+            <span class="tag">PMBOK + Scrum</span>
+            <span class="tag">Jira · Confluence</span>
+          </div>
+        </article>
+        <article class="card">
+          <span class="badge green" data-i="p6_badge">Live demo disponible</span>
+          <h3 data-i="p6_h">ServiceShop — Plataforma de servicios web</h3>
+          <p data-i="p6_p">Plataforma web para la publicación y contratación de servicios entre usuarios. Incluye registro, gestión de perfiles, publicación de servicios con imágenes, sistema de reseñas y panel de administración. Desarrollada en equipo con metodología Scrum.</p>
+          <div class="tags">
+            <span class="tag">Python · Django</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">HTML · CSS</span>
+            <span class="tag">Sistema de reseñas</span>
+            <span class="tag">Scrum</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link demo" href="https://valentinasosa.pythonanywhere.com/appserviceshop/" target="_blank" rel="noopener" data-i="p6_demo">🌐 Ver demo en vivo</a>
+            <a class="card-link" href="https://github.com/ValennSosa/ServiceShop" target="_blank" rel="noopener" data-i="p6_code">Ver código</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="badge green" data-i="p6_badge">Live demo disponible</span>
+          <h3 data-i="p8_h">Archivo 404 — Casos sin resolver</h3>
+          <p data-i="p8_p">Sitio web multipágina del curso de Desarrollo Web (Coderhouse): un archivo ficticio de casos históricos sin resolver, con portada, catálogo, expedientes, teorías y formulario de contacto. Diseño mobile first y responsive.</p>
+          <div class="tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">SCSS</span>
+            <span class="tag">Bootstrap 5</span>
+            <span class="tag">Responsive</span>
+            <span class="tag">npm</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link demo" href="https://archivo-404.vercel.app" target="_blank" rel="noopener" data-i="p6_demo">🌐 Ver demo en vivo</a>
+            <a class="card-link" href="https://github.com/ValennSosa/archivo-404" target="_blank" rel="noopener" data-i="p6_code">Ver código</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3 data-i="p7_h">Sistema de Gestión de Estacionamiento Inteligente</h3>
+          <p data-i="p7_p">Sistema IoT integrado: frontend Vue.js, backend Django y sensor físico programado en Arduino que detecta disponibilidad de espacios en tiempo real. Incluye registro de usuarios y visualización de ocupación.</p>
+          <div class="tags">
+            <span class="tag">Vue.js</span>
+            <span class="tag">Django · Python</span>
+            <span class="tag">Arduino · IoT</span>
+            <span class="tag">Sensores físicos</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link" href="https://github.com/ValennSosa/EstacionamientoFacu" target="_blank" rel="noopener" data-i="p7_code">Ver código</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <span class="idx" aria-hidden="true">04</span>
+        <div>
+          <div class="eyebrow" data-i="sk_eyebrow">Habilidades</div>
+          <h2 data-i="sk_h">Stack y herramientas</h2>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill"><h3>SAP</h3>
+          <div class="chips"><span class="chip">ABAP / ABAP OO</span><span class="chip">ABAP Dictionary</span><span class="chip">Open SQL</span><span class="chip">BAPIs · BADIs · User Exits</span><span class="chip">ALV</span><span class="chip">OData</span><span class="chip">SAP UI5 / Fiori</span><span class="chip">SAP BTP</span><span class="chip">ECC · S/4HANA</span><span class="chip">SAP HANA</span></div>
+        </div>
+        <div class="skill"><h3 data-i="sk2">Lenguajes y web</h3>
+          <div class="chips"><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">C++</span><span class="chip">PHP · CodeIgniter</span><span class="chip">Vue.js</span><span class="chip">SQL</span></div>
+        </div>
+        <div class="skill"><h3 data-i="sk3">Análisis y diseño</h3>
+          <div class="chips"><span class="chip">BPMN</span><span class="chip">UML</span><span class="chip" data-i="sk3c">Análisis de requerimientos</span></div>
+        </div>
+        <div class="skill"><h3 data-i="sk4">Gestión de proyectos</h3>
+          <div class="chips"><span class="chip">PMBOK</span><span class="chip">Scrum</span><span class="chip">Jira</span><span class="chip">Confluence</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificados">
+      <div class="section-head">
+        <span class="idx" aria-hidden="true">05</span>
+        <div>
+          <div class="eyebrow" data-i="cert_eyebrow">Certificados</div>
+          <h2 data-i="cert_h">Formación complementaria</h2>
+        </div>
+      </div>
+      <div class="grid certs">
+        <article class="card cert">
+          <a class="cert-thumb" href="assets/certificados/ciberseguridad-coderhouse.pdf" target="_blank" rel="noopener">
+            <img src="assets/certificados/ciberseguridad-coderhouse.jpg" width="1000" height="677" loading="lazy" alt="Certificado de Ciberseguridad de Coderhouse a nombre de Valentina Sosa" data-i-alt="cert1_alt">
+          </a>
+          <h3 data-i="cert1_h">Ciberseguridad</h3>
+          <div class="meta" data-i="cert1_meta">Coderhouse · Certificado por Binance · 14 de octubre de 2026</div>
+          <p data-i="cert1_p">Curso completado con formación en vivo y asincrónica, cumpliendo todos los requisitos académicos exigidos.</p>
+          <div class="tags"><span class="tag">Coderhouse</span><span class="tag" data-i="cert1_t1">7 semanas</span><span class="tag" data-i="cert1_t2">14 horas</span></div>
+          <div class="card-links"><a class="card-link demo" href="assets/certificados/ciberseguridad-coderhouse.pdf" target="_blank" rel="noopener" data-i="cert_view">Ver certificado (PDF)</a></div>
+        </article>
+        <article class="card cert">
+          <a class="cert-thumb" href="assets/certificados/desarrollo-web-coderhouse.pdf" target="_blank" rel="noopener">
+            <img src="assets/certificados/desarrollo-web-coderhouse.jpg" width="1000" height="677" loading="lazy" alt="Certificado de Desarrollo Web de Coderhouse a nombre de Valentina Sosa" data-i-alt="cert2_alt">
+          </a>
+          <h3 data-i="cert2_h">Desarrollo Web</h3>
+          <div class="meta" data-i="cert2_meta">Coderhouse · Certificado por PedidosYa · 20 de octubre de 2026</div>
+          <p data-i="cert2_p">Curso completado con formación en vivo y asincrónica, cumpliendo todos los requisitos académicos exigidos.</p>
+          <div class="tags"><span class="tag">Coderhouse</span><span class="tag" data-i="cert2_t1">10 semanas</span><span class="tag" data-i="cert2_t2">20 horas</span></div>
+          <div class="card-links"><a class="card-link demo" href="assets/certificados/desarrollo-web-coderhouse.pdf" target="_blank" rel="noopener" data-i="cert_view">Ver certificado (PDF)</a></div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="contact-band" id="contacto">
+    <div class="wrap contact">
+      <h2 data-i="c_h">Trabajemos juntos</h2>
+      <p data-i="c_p">Estoy abierta a nuevas oportunidades en desarrollo SAP y otras áreas de IT. Escribime y te respondo a la brevedad.</p>
+      <a class="mail-big" href="mailto:valeensoosa@gmail.com">valeensoosa@gmail.com</a>
       <div class="cta">
-        <a class="btn primary" href="#proyectos" data-i="hero_cta1">Ver proyectos</a>
-        <a class="btn ghost" href="#contacto" data-i="hero_cta2">Contactame</a>
-      </div>
-    </div>
-    <div class="code-card" aria-hidden="true">
-      <div class="dots"><span></span><span></span><span></span></div>
-      <div><span class="k">REPORT</span> z_portfolio.</div>
-      <div>&nbsp;</div>
-      <div><span class="c">* Backend ABAP + Frontend Fiori</span></div>
-      <div><span class="k">DATA</span>(lv_dev) = <span class="s">'Valentina Sosa'</span>.</div>
-      <div><span class="k">SELECT</span> * <span class="k">FROM</span> zproyectos</div>
-      <div>&nbsp;&nbsp;<span class="k">INTO TABLE</span> @<span class="k">DATA</span>(lt_apps).</div>
-      <div><span class="k">WRITE</span>: <span class="s" data-i="code_write">'Hola, soy Valen'</span>.<span class="caret"></span></div>
-    </div>
-  </div>
-
-  <section id="sobre">
-    <div class="eyebrow" data-i="about_eyebrow">Sobre mí</div>
-    <h2 data-i="about_h">Ingeniería aplicada a procesos de negocio</h2>
-    <div class="about-grid">
-      <div>
-        <p data-i="about_p1" style="margin-bottom:14px">Soy desarrolladora de software con más de 2 años de experiencia en el ecosistema SAP e Ingeniera en Sistemas de Información (UTN). Trabajo el ciclo completo de desarrollo: relevamiento de requerimientos con consultores funcionales, implementación backend en ABAP, servicios OData y aplicaciones SAP UI5/Fiori.</p>
-        <p data-i="about_p2">Mi formación previa en Economía y Administración me da una mirada analítica sobre los procesos de negocio: entiendo qué problema resuelve cada desarrollo antes de escribir la primera línea de código.</p>
-      </div>
-      <div>
-        <div class="fact"><b data-i="f1b">+2 años</b><span data-i="f1s">de experiencia profesional en SAP</span></div>
-        <div class="fact"><b data-i="f2b">Full-stack SAP</b><span data-i="f2s">ABAP + OData + UI5/Fiori en ECC, S/4HANA y BTP</span></div>
-        <div class="fact"><b data-i="f3b">2026</b><span data-i="f3s">graduada — Ing. en Sistemas de Información, UTN</span></div>
+        <button class="btn primary" id="copyBtn" type="button" onclick="copyMail()" data-i="c_b1">Copiar email</button>
+        <a class="btn ghost" href="https://www.linkedin.com/in/valentina-sosa-55b455254/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </section>
-
-  <section id="exp">
-    <div class="eyebrow" data-i="exp_eyebrow">Experiencia</div>
-    <h2 data-i="exp_h">Trayectoria profesional</h2>
-    <div class="xp">
-      <h3>SAP ABAP &amp; BTP Developer</h3>
-      <div class="meta" data-i="exp_meta">Alan Consulting · Marzo 2024 – Actualidad</div>
-      <ul>
-        <li data-i="exp_l1">Desarrollo, mantenimiento y optimización de soluciones SAP utilizando ABAP, incluyendo reportes ALV, módulos de funciones, BAPIs, BADIs y User Exits.</li>
-        <li data-i="exp_l2">Desarrollo de servicios OData, modelado de datos y creación de objetos en ABAP Dictionary (tablas, estructuras y elementos de datos).</li>
-        <li data-i="exp_l3">Desarrollo y mantenimiento de aplicaciones SAPUI5 / SAP Fiori, utilizando XML, JavaScript, JSON y arquitectura MVC.</li>
-        <li data-i="exp_l4">Implementación de extensiones e integraciones en SAP Business Technology Platform (SAP BTP), conectadas con sistemas SAP ECC y S/4HANA.</li>
-        <li data-i="exp_l5">Análisis de requerimientos funcionales y técnicos, debugging y resolución de incidencias en aplicaciones y desarrollos SAP.</li>
-        <li data-i="exp_l6">Colaboración con consultores funcionales y equipos técnicos en proyectos.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="proyectos">
-    <div class="eyebrow" data-i="proj_eyebrow">Proyectos</div>
-    <h2 data-i="proj_h">Trabajo seleccionado</h2>
-
-    <!-- PROFESSIONAL -->
-    <div class="grid">
-      <article class="card">
-        <h3 data-i="p3_h">Gestión de exportaciones marítimas</h3>
-        <p data-i="p3_p">Aplicación SAP para el seguimiento de operaciones de exportación de embarcaciones: estados, documentación asociada y consultas sobre datos de negocio en tiempo real.</p>
-        <div class="tags">
-          <span class="tag">ABAP OO</span>
-          <span class="tag">S/4HANA</span>
-          <span class="tag">ALV Reports</span>
-          <span class="tag">Open SQL</span>
-        </div>
-      </article>
-    </div>
-    <p style="margin-top:12px;font-size:.85rem;color:var(--muted)" data-i="proj_note">Los proyectos profesionales se describen de forma general para proteger la confidencialidad de los clientes.</p>
-
-    <!-- ACADEMIC -->
-    <div class="sub-eyebrow" data-i="acad_eyebrow">Proyectos académicos</div>
-    <div class="grid">
-      <article class="card feature">
-        <span class="badge" data-i="p1_badge">Proyecto Final de Carrera</span>
-        <h3 data-i="p1_h">Sistema Web de Gestión de Reclamos Municipales</h3>
-        <p data-i="p1_p">Desarrollo full-stack: backend en PHP (CodeIgniter), frontend en Vue.js y base de datos MySQL. Dirección del proyecto con metodología híbrida PMBOK + Scrum: 8 sprints de 4 semanas y más de 40 requerimientos funcionales y no funcionales con trazabilidad completa. Testing y documentación: pruebas unitarias con PHPUnit, casos de prueba funcionales y diagramas UML. Gestión de tareas y documentación en Jira y Confluence, con un cumplimiento del 95% del cronograma planificado.</p>
-        <div class="tags">
-          <span class="tag">PHP · CodeIgniter</span>
-          <span class="tag">Vue.js</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">PHPUnit</span>
-          <span class="tag">UML</span>
-          <span class="tag">PMBOK + Scrum</span>
-          <span class="tag">Jira · Confluence</span>
-        </div>
-      </article>
-      <article class="card">
-        <span class="badge green" data-i="p6_badge">Live demo disponible</span>
-        <h3 data-i="p6_h">ServiceShop — Plataforma de servicios web</h3>
-        <p data-i="p6_p">Plataforma web para la publicación y contratación de servicios entre usuarios. Incluye registro, gestión de perfiles, publicación de servicios con imágenes, sistema de reseñas y panel de administración. Desarrollada en equipo con metodología Scrum.</p>
-        <div class="tags">
-          <span class="tag">Python · Django</span>
-          <span class="tag">SQLite</span>
-          <span class="tag">HTML · CSS</span>
-          <span class="tag">Sistema de reseñas</span>
-          <span class="tag">Scrum</span>
-        </div>
-        <div class="card-links">
-          <a class="card-link demo" href="https://valentinasosa.pythonanywhere.com/appserviceshop/" target="_blank" rel="noopener" data-i="p6_demo">🌐 Ver demo en vivo</a>
-          <a class="card-link" href="https://github.com/ValennSosa/ServiceShop" target="_blank" rel="noopener" data-i="p6_code">Ver código</a>
-        </div>
-      </article>
-      <article class="card">
-        <span class="badge green" data-i="p6_badge">Live demo disponible</span>
-        <h3 data-i="p8_h">Archivo 404 — Casos sin resolver</h3>
-        <p data-i="p8_p">Sitio web multipágina del curso de Desarrollo Web (Coderhouse): un archivo ficticio de casos históricos sin resolver, con portada, catálogo, expedientes, teorías y formulario de contacto. Diseño mobile first y responsive.</p>
-        <div class="tags">
-          <span class="tag">HTML5</span>
-          <span class="tag">SCSS</span>
-          <span class="tag">Bootstrap 5</span>
-          <span class="tag">Responsive</span>
-          <span class="tag">npm</span>
-        </div>
-        <div class="card-links">
-          <a class="card-link demo" href="https://archivo-404.vercel.app" target="_blank" rel="noopener" data-i="p6_demo">🌐 Ver demo en vivo</a>
-          <a class="card-link" href="https://github.com/ValennSosa/archivo-404" target="_blank" rel="noopener" data-i="p6_code">Ver código</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3 data-i="p7_h">Sistema de Gestión de Estacionamiento Inteligente</h3>
-        <p data-i="p7_p">Sistema IoT integrado: frontend Vue.js, backend Django y sensor físico programado en Arduino que detecta disponibilidad de espacios en tiempo real. Incluye registro de usuarios y visualización de ocupación.</p>
-        <div class="tags">
-          <span class="tag">Vue.js</span>
-          <span class="tag">Django · Python</span>
-          <span class="tag">Arduino · IoT</span>
-          <span class="tag">Sensores físicos</span>
-          <span class="tag">JavaScript</span>
-        </div>
-        <div class="card-links">
-          <a class="card-link" href="https://github.com/ValennSosa/EstacionamientoFacu" target="_blank" rel="noopener" data-i="p7_code">Ver código</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="eyebrow" data-i="sk_eyebrow">Habilidades</div>
-    <h2 data-i="sk_h">Stack y herramientas</h2>
-    <div class="skills">
-      <div class="skill"><h3>SAP</h3>
-        <div class="chips"><span class="chip">ABAP / ABAP OO</span><span class="chip">ABAP Dictionary</span><span class="chip">Open SQL</span><span class="chip">BAPIs · BADIs · User Exits</span><span class="chip">ALV</span><span class="chip">OData</span><span class="chip">SAP UI5 / Fiori</span><span class="chip">SAP BTP</span><span class="chip">ECC · S/4HANA</span><span class="chip">SAP HANA</span></div>
-      </div>
-      <div class="skill"><h3 data-i="sk2">Lenguajes y web</h3>
-        <div class="chips"><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">C++</span><span class="chip">PHP · CodeIgniter</span><span class="chip">Vue.js</span><span class="chip">SQL</span></div>
-      </div>
-      <div class="skill"><h3 data-i="sk3">Análisis y diseño</h3>
-        <div class="chips"><span class="chip">BPMN</span><span class="chip">UML</span><span class="chip" data-i="sk3c">Análisis de requerimientos</span></div>
-      </div>
-      <div class="skill"><h3 data-i="sk4">Gestión de proyectos</h3>
-        <div class="chips"><span class="chip">PMBOK</span><span class="chip">Scrum</span><span class="chip">Jira</span><span class="chip">Confluence</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="certificados">
-<div class="eyebrow" data-i="cert_eyebrow">Certificados</div>
-<h2 data-i="cert_h">Formación complementaria</h2>
-<div class="grid">
-<article class="card cert">
-<a class="cert-thumb" href="assets/certificados/ciberseguridad-coderhouse.pdf" target="_blank" rel="noopener">
-<img src="assets/certificados/ciberseguridad-coderhouse.jpg" width="1000" height="677" loading="lazy" alt="Certificado de Ciberseguridad de Coderhouse a nombre de Valentina Sosa" data-i-alt="cert1_alt">
-</a>
-<h3 data-i="cert1_h">Ciberseguridad</h3>
-<div class="meta" data-i="cert1_meta">Coderhouse · Certificado por Binance · 14 de octubre de 2026</div>
-<p data-i="cert1_p">Curso completado con formación en vivo y asincrónica, cumpliendo todos los requisitos académicos exigidos.</p>
-<div class="tags"><span class="tag">Coderhouse</span><span class="tag" data-i="cert1_t1">7 semanas</span><span class="tag" data-i="cert1_t2">14 horas</span></div>
-<div class="card-links"><a class="card-link demo" href="assets/certificados/ciberseguridad-coderhouse.pdf" target="_blank" rel="noopener" data-i="cert_view">Ver certificado (PDF)</a></div>
-</article>
-<article class="card cert">
-<a class="cert-thumb" href="assets/certificados/desarrollo-web-coderhouse.pdf" target="_blank" rel="noopener">
-<img src="assets/certificados/desarrollo-web-coderhouse.jpg" width="1000" height="677" loading="lazy" alt="Certificado de Desarrollo Web de Coderhouse a nombre de Valentina Sosa" data-i-alt="cert2_alt">
-</a>
-<h3 data-i="cert2_h">Desarrollo Web</h3>
-<div class="meta" data-i="cert2_meta">Coderhouse · Certificado por PedidosYa · 20 de octubre de 2026</div>
-<p data-i="cert2_p">Curso completado con formación en vivo y asincrónica, cumpliendo todos los requisitos académicos exigidos.</p>
-<div class="tags"><span class="tag">Coderhouse</span><span class="tag" data-i="cert2_t1">10 semanas</span><span class="tag" data-i="cert2_t2">20 horas</span></div>
-<div class="card-links"><a class="card-link demo" href="assets/certificados/desarrollo-web-coderhouse.pdf" target="_blank" rel="noopener" data-i="cert_view">Ver certificado (PDF)</a></div>
-</article>
-</div>
-</section>
-
-<div class="contact" id="contacto">
-    <h2 data-i="c_h">Trabajemos juntos</h2>
-    <p data-i="c_p">Estoy abierta a nuevas oportunidades en desarrollo SAP y otras áreas de IT. Escribime y te respondo a la brevedad.</p>
-    <a class="mail-big" href="mailto:valeensoosa@gmail.com">valeensoosa@gmail.com</a>
-    <div class="cta" style="justify-content:center">
-      <button class="btn primary" id="copyBtn" onclick="copyMail()" data-i="c_b1">Copiar email</button>
-      <a class="btn ghost" href="https://www.linkedin.com/in/valentina-sosa-55b455254/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
 
 </main>
 
 <footer>
-  <span data-i="foot">© 2026 Valentina Sosa · Frontera, Santa Fe, Argentina</span>
+  <div class="wrap"><span data-i="foot">© 2026 Valentina Sosa · Frontera, Santa Fe, Argentina</span></div>
 </footer>
 
 <script>
@@ -450,6 +740,13 @@ cert2_t1:"10 weeks", cert2_t2:"20 hours",
   }
 };
 let curLang = 'es';
+const menuBtn = document.getElementById('menuBtn');
+const siteNav = document.getElementById('site-nav');
+const headerEl = document.querySelector('header');
+function menuLabel(open){
+  if (curLang === 'es') return open ? 'Cerrar menú' : 'Abrir menú';
+  return open ? 'Close menu' : 'Open menu';
+}
 function copyMail(){
   const done = () => {
     const b = document.getElementById('copyBtn');
@@ -469,11 +766,39 @@ function setLang(l){
   document.documentElement.lang = l;
   document.querySelectorAll('[data-i]').forEach(el=>{ el.textContent = T[l][el.dataset.i] || ''; });
   document.querySelectorAll('[data-i-alt]').forEach(el=>{ el.alt = T[l][el.dataset.iAlt] || ''; });
-document.getElementById('btn-es').classList.toggle('on', l==='es');
-document.getElementById('btn-es').setAttribute('aria-pressed', l==='es');
-document.getElementById('btn-en').setAttribute('aria-pressed', l==='en');
+  document.getElementById('btn-es').classList.toggle('on', l==='es');
+  document.getElementById('btn-es').setAttribute('aria-pressed', l==='es');
+  document.getElementById('btn-en').setAttribute('aria-pressed', l==='en');
   document.getElementById('btn-en').classList.toggle('on', l==='en');
+  const open = siteNav.classList.contains('open');
+  menuBtn.setAttribute('aria-label', menuLabel(open));
 }
+function onScroll(){
+  headerEl.classList.toggle('scrolled', window.scrollY > 20);
+}
+menuBtn.addEventListener('click', () => {
+  const open = siteNav.classList.toggle('open');
+  headerEl.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  menuBtn.setAttribute('aria-label', menuLabel(open));
+});
+siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  siteNav.classList.remove('open');
+  headerEl.classList.remove('menu-open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.setAttribute('aria-label', menuLabel(false));
+}));
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && siteNav.classList.contains('open')) {
+    siteNav.classList.remove('open');
+    headerEl.classList.remove('menu-open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', menuLabel(false));
+    menuBtn.focus();
+  }
+});
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
 setLang('es');
 </script>
 </body>
