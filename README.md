@@ -1,6 +1,6 @@
 # Portafolio · Valentina Sosa
 
-Sitio personal de **Valentina Sosa**, Software Developer (SAP ABAP & BTP · full-stack SAP UI5/Fiori) y estudiante avanzada de Ingeniería en Sistemas de Información (UTN FR San Francisco).
+Sitio personal de **Valentina Sosa**, Software Developer (SAP ABAP & BTP · full-stack SAP UI5/Fiori) e Ingeniera en Sistemas de Información (UTN FR San Francisco).
 
 🌐 **Sitio en vivo:** [valennsosa.github.io](https://valennsosa.github.io/)
 
